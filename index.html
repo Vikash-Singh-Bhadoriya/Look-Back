@@ -1107,11 +1107,8 @@
         v5: [3, "Fifth video, better light"],
         sketch: [5, "Sketches on the desk"],
       };
-      const LOC = (id) =>
-        ["jpg", "jpeg", "png", "webp"].flatMap((e) => [
-          id + "." + e,
-          "file:///C:/Downloads/" + id + "." + e,
-        ]);
+        const LOC = (id) =>
+      ["jpg", "jpeg", "png", "webp"].map((e) => "images/" + id + "." + e);
       function Ph({ id, r = "4/3", cls = "" }) {
         const [ok, setOk] = useState(0),
           [ix, setIx] = useState(0),
